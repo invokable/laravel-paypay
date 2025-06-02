@@ -12,21 +12,21 @@ use Revolution\PayPay\PayPayClient;
 
 class PayPayTest extends TestCase
 {
-    public function testInstance()
+    public function test_instance()
     {
         $client = new PayPayClient(m::mock(Client::class));
 
         $this->assertInstanceOf(PayPayClient::class, $client);
     }
 
-    public function testContainer()
+    public function test_container()
     {
         $client = app(Factory::class);
 
         $this->assertInstanceOf(PayPayClient::class, $client);
     }
 
-    public function testClientUsing()
+    public function test_client_using()
     {
         $mock = m::mock(Client::class);
 
@@ -36,7 +36,7 @@ class PayPayTest extends TestCase
         $this->assertInstanceOf(Client::class, $client->client());
     }
 
-    public function testClientUsingCallable()
+    public function test_client_using_callable()
     {
         $client = PayPay::clientUsing(function () {
             return m::mock(Client::class);
@@ -45,7 +45,7 @@ class PayPayTest extends TestCase
         $this->assertInstanceOf(Client::class, $client->client());
     }
 
-    public function testCodeController()
+    public function test_code_controller()
     {
         $code = PayPay::code();
 
@@ -53,7 +53,7 @@ class PayPayTest extends TestCase
         $this->assertInstanceOf(Code::class, $code);
     }
 
-    public function testPaymentController()
+    public function test_payment_controller()
     {
         $payment = PayPay::payment();
 
@@ -61,7 +61,7 @@ class PayPayTest extends TestCase
         $this->assertInstanceOf(Payment::class, $payment);
     }
 
-    public function testBadMethodCall()
+    public function test_bad_method_call()
     {
         $this->expectException(\BadMethodCallException::class);
 
