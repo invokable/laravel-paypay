@@ -55,7 +55,7 @@ $response = PayPay::code()->createQRCode($payload);
 // ...
 ```
 
-Testing
+### Testing
 ```php
 use Revolution\PayPay\Facades\PayPay;
 
