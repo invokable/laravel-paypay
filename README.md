@@ -45,13 +45,13 @@ Magic method returns the corresponding controller class.
 ```php
 use Revolution\PayPay\Facades\PayPay;
 
-// PayPay\OpenPaymentAPI\Controller\Code
+/* @var PayPay\OpenPaymentAPI\Controller\Code $code */
 $code = PayPay::code();
 
-// PayPay\OpenPaymentAPI\Controller\Payment
+/* @var PayPay\OpenPaymentAPI\Controller\Payment $payment */
 $payment = PayPay::payment();
 
-// PayPay\OpenPaymentAPI\Controller\Refund
+/* @var PayPay\OpenPaymentAPI\Controller\Refund $refund */
 $refund = PayPay::refund();
 ```
 
@@ -71,7 +71,7 @@ $response = PayPay::code()->createQRCode($payload);
 ```php
 use Revolution\PayPay\Facades\PayPay;
 
-PayPay::shouldReceive('code->createQRCode')->once()->andReturn([]);
+PayPay::expects('code->createQRCode')->once()->andReturn([]);
 ```
 
 ## LICENSE
