@@ -19,8 +19,8 @@ Key features:
 The package allows you to work with PayPay's payment, refund, QR code, user, and wallet operations using Laravel's familiar syntax while maintaining full access to the underlying PayPay SDK functionality.
 
 ## Requirements
-- PHP >= 8.2
-- Laravel >= 11.0
+- PHP >= 8.3
+- Laravel >= 12.0
 
 ## Installation
 
